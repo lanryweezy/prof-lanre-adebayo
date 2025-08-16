@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,8 @@
                 <div class="logo">
                     <h1>Prof. Sulaiman Olanrewaju Adebayo</h1>
                 </div>
-                <nav>
-                    <ul>
+                <nav class="main-nav">
+                    <ul class="nav-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#profile">Profile</a></li>
                         <li><a href="index.html#research">Research</a></li>
@@ -27,6 +28,9 @@
                         <li><a href="services.html" class="active">Services</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -224,14 +228,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
