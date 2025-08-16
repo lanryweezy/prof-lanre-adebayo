@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,18 +47,7 @@
     <!-- Books Section -->
     <section class="section" id="books">
         <div class="container">
-            <h2 class="section-title">Academic Publications</h2>
-            <p class="books-intro">
-                With over 39 years of experience in psychology and behavioural studies, Prof. Adebayo has authored and contributed to numerous 
-                publications that have shaped understanding in social psychology, organizational behaviour, and related fields.
-            </p>
-            
-            <div class="category-tabs">
-                <div class="category-tab active" data-category="all">All Publications</div>
-                <div class="category-tab" data-category="books">Books</div>
-                <div class="category-tab" data-category="journals">Journal Articles</div>
-            </div>
-            
+            <h2 class="section-title">Books</h2>
             <div class="books-grid">
                 <!-- Book 1 -->
                 <div class="book-card" data-category="books">
@@ -80,7 +70,15 @@
                         <p>A co-edited book of readings.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Publications Section -->
+    <section class="section" id="publications" style="background-color: var(--light);">
+        <div class="container">
+            <h2 class="section-title">Journal Articles</h2>
+            <div class="books-grid">
                 <!-- Journal Article 1 -->
                 <div class="book-card" data-category="journals">
                     <div class="book-cover">
@@ -130,7 +128,7 @@
                     <div class="book-cover">
                         <i class="fas fa-file-alt"></i>
                     </div>
-                    <div class="book-info">
+                    <div class_="book-info">
                         <h3>Role of computer self-efficacy and gender in computer-based test anxiety among undergraduates in Nigeria.</h3>
                         <p>Psychological Thought, 9(1), 58-66.</p>
                     </div>
@@ -203,31 +201,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Category filtering
-        document.querySelectorAll('.category-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove active class from all tabs
-                document.querySelectorAll('.category-tab').forEach(t => {
-                    t.classList.remove('active');
-                });
-                
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                // Get category
-                const category = tab.getAttribute('data-category');
-                
-                // Filter books
-                document.querySelectorAll('.book-card').forEach(card => {
-                    if (category === 'all' || card.getAttribute('data-category') === category) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
